@@ -1,18 +1,10 @@
-
 /**
- * https://tokenlocker.app
- */
-
-// #####  ####   #  #  ######  ##    #  #         ####   #  #  ######  ########         ##      #####   #####
-//   #   #    #  # #   #       # #   #  #        #    #  # #   #       #       #       #  #     #    #  #    #
-//   #   #    #  ##    ####    #  #  #  #        #    #  ##    ####    ########       ######    #####   #####
-//   #   #    #  # #   #	     #   # #  #        #    #  # #   #       #       # ##  #      #   #       #
-//   #    ####   #  #  ######  #    ##  #######   ####   #  #  ######  #       # ## #        #  #       #
-
+ * @title TokenLocker.app - Secure liquidity and token locking solution on DeFi
+ * @To Use the dApp: https://tokenlocker.app
+*/
 
 // SPDX-License-Identifier: UNLICENSED
-// This contract locks uniswap v2 liquidity tokens or standard erc20 token. Used to give investors peace of mind a token team has locked liquidity
-// TokenLocker.app - Secure token and liquidity locking solution on DeFi
+// This contract locks uniswap v2 compatible liquidity pair or standard erc20 token. Used to give investors peace of mind a token team has locked liquidity
 
 pragma solidity 0.6.12;
 
@@ -59,7 +51,7 @@ contract TokenLockerApp is Ownable, ReentrancyGuard {
   mapping(address => UserInfo) private users;
 
   EnumerableSet.AddressSet private lockedTokens;
-  mapping(address => TokenLock[]) public tokenLocks; //map univ2 pair to all its locks
+  mapping(address => TokenLock[]) public tokenLocks; //map univ2-compatible pair and tokens to all its locks
 
   EnumerableSet.AddressSet private dexFactoryList;
 
@@ -105,7 +97,7 @@ contract TokenLockerApp is Ownable, ReentrancyGuard {
   }
   
   /**
-   * @notice set the migrator contract which allows locked lp tokens to be migrated to uniswap v3
+   * @notice set the migrator contract which allows locked lp tokens to be migrated to Uniswap-compatible v3
    */
   function setMigrator(IMigrator _migrator) public onlyOwner {
     migrator = _migrator;
