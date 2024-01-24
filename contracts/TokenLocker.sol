@@ -12,8 +12,7 @@
 
 // SPDX-License-Identifier: UNLICENSED
 // This contract locks uniswap v2 liquidity tokens or standard erc20 token. Used to give investors peace of mind a token team has locked liquidity
-// and that the univ2 tokens cannot be removed from uniswap until the specified unlock date has been reached.
-// TokenLocker.app
+// TokenLocker.app - Secure token and liquidity locking solution on DeFi
 
 pragma solidity 0.6.12;
 
@@ -172,11 +171,11 @@ contract TokenLockerApp is Ownable, ReentrancyGuard {
 
     //ensure this pair is a univ2-compatible pair by querying the factory
     IUniswapV2Pair lpair = IUniswapV2Pair(address(_lpToken));
-    address factoryPairAddress = lpair.factory();
-    require(dexFactoryList.contains(factoryPairAddress), 'DEX NOT SUPPORTED');
+    address factoryAddress = lpair.factory();
+    require(dexFactoryList.contains(factoryAddress), 'DEX NOT SUPPORTED');
 
-    address foundFactory = IUniFactory(factoryPairAddress).getPair(lpair.token0(), lpair.token1());
-    require(foundFactory == address(_lpToken), 'NOT UNIV2');
+    address factoryPairAddress = IUniFactory(factoryAddress).getPair(lpair.token0(), lpair.token1());
+    require(factoryPairAddress == address(_lpToken), 'NOT UNIV2');
 
     _addLock(_lpToken, _amount, _unlock_date, _withdrawer, _referral, true);
   }
