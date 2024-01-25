@@ -18,11 +18,11 @@ everything will work as expected.
 
 # Contract deployed and Source Code
 Contracts deployed:  
-Ethereum, BNBChain, Polygon, Avalanche, Arbitrum One, Base, Goerli, Sepolia
+Ethereum, BNB Chain, Polygon, Avalanche, Arbitrum One, Base, Goerli, Sepolia
 
 Ethereum: 0x271eb0d7f4cd963f7214313d0b94d0844bb41c1d
 
-BNBChain: 0x271eb0d7f4cd963f7214313d0b94d0844bb41c1d
+BNB Chain: 0x271eb0d7f4cd963f7214313d0b94d0844bb41c1d
 
 Polygon: 0x271eb0d7f4cd963f7214313d0b94d0844bb41c1d
 
@@ -40,7 +40,7 @@ Source Code:
 
 Ethereum: https://etherscan.io/address/0x271eb0d7f4cd963f7214313d0b94d0844bb41c1d#code
 
-BNBChain: https://bscscan.com/address/0x271eb0d7f4cd963f7214313d0b94d0844bb41c1d#code  
+BNB Chain: https://bscscan.com/address/0x271eb0d7f4cd963f7214313d0b94d0844bb41c1d#code  
 
 Polygon: https://polygonscan.com/address/0x271eb0d7f4cd963f7214313d0b94d0844bb41c1d#code  
 
