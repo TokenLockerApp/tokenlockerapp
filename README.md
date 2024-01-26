@@ -44,7 +44,7 @@ BNB Chain: https://bscscan.com/address/0x271eb0d7f4cd963f7214313d0b94d0844bb41c1
 
 Polygon: https://polygonscan.com/address/0x271eb0d7f4cd963f7214313d0b94d0844bb41c1d#code  
 
-Avalanche: https://snowtrace.io/address/0x271eb0d7f4cd963f7214313d0b94d0844bb41c1d#code 
+Avalanche: https://snowtrace.io/address/0x271EB0d7f4cd963F7214313d0b94d0844bb41C1D/contract/43114/code
 
 Arbitrum One: https://arbiscan.io/address/0x271eb0d7f4cd963f7214313d0b94d0844bb41c1d#code
 
